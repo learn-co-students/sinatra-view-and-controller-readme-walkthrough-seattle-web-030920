@@ -4,13 +4,22 @@ class App < Sinatra::Base
   get '/reverse' do
     erb :reverse
   end
+  # renders reverse.erb page
 
   post '/reverse' do
+    original_string = params["string"]
+    @reversed_string = original_string.reverse
+
     erb :reversed
   end
+  # receives that params hash from the form
+  # renders reversed.erb page
 
   get '/friends' do
     # Write your code here!
+    @friends = ['Emily Wilding Davison', 'Harriet Tubman', 'Joan of Arc', 'Malala Yousafzai', 'Sojourner Truth']
+    erb :friends
 
   end
+  # renders friends.erb page
 end
