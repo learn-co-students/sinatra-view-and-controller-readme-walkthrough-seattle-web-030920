@@ -31,11 +31,11 @@ describe "App" do
     end
 
     it 'displays friends in the view' do
-      @friends = ['Emily Wilding Davison', 'Harriet Tubman', 'Joan of Arc', 'Malala Yousafzai', 'Sojourner Truth']
+      @friends = ["Johnna Gurgel", "Aaron Lewis", "Ana Lisa Sutherland", "Neal Tingley"]
 
       get '/friends'
 
-      expect(last_response.body).to include('Malala Yousafzai')
+      expect(last_response.body).to include("Johnna Gurgel")
     end
   end
 end
